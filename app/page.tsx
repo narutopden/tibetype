@@ -108,8 +108,12 @@ export default function Component() {
           />
           <div 
             ref={textRef}
-            className="absolute top-0 left-0 right-0 text-3xl text-center leading-relaxed font-tibetan outline-none"
-            style={{ transform: `translateY(-${scrollPosition}px)`, transition: 'transform 0.3s ease-out' }}
+            className="absolute top-0 left-0 right-0 text-3xl text-center leading-relaxed"
+            style={{ 
+              transform: `translateY(-${scrollPosition}px)`, 
+              transition: 'transform 0.3s ease-out',
+              fontFamily: 'var(--font-tibetan)', // Apply the Tibetan font here
+            }}
           >
             {customText.split('').map((char, index) => (
               <span

@@ -12,6 +12,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const tibetanFont = localFont({
+  src: "./fonts/tibetan.ttf",
+  variable: "--font-tibetan",
+  weight: "400", // Adjust weight as necessary
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${tibetanFont.variable} antialiased`}>
         {children}
       </body>
     </html>
